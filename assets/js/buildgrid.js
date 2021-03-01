@@ -4,8 +4,8 @@ function addNewDiv(addTo, elementType, className){
     let lastDiv = document.querySelector(addTo);
     console.log(lastDiv);
     let newDiv = document.createElement(elementType);
-    let insertDiv = lastDiv.append(newDiv);
-    let addClass = newDiv.classList.add(className,"JSDiv");
+    lastDiv.append(newDiv);
+    newDiv.classList.add(className,"JSDiv");
     newDiv.innerHTML = `I'm a new ${className} ${elementType}`;   
 }
 
@@ -25,12 +25,13 @@ function getInputValue(){
         errorDiv.innerText = "Please add a value"; 
         input1.appendChild(errorDiv);
     } else if(colX > 12){
-        errorDiv.innerText = "Select 1,2,3,4,6 or 12"; 
+        errorDiv.innerText = "Select # between 1 - 2"; 
         input1.appendChild(errorDiv); 
     } else {
         //if passes tests call the addNewDiv function
-        return addNewDiv(".row","div",`col-${colX}`);
         console.log("passed both tests")
+        return addNewDiv(".row","div",`col-${colX}`);
+        
     }
     //clear error message
     document.getElementById("input1").addEventListener("input", function(){
@@ -39,16 +40,6 @@ function getInputValue(){
     
 }
 
-let jsDivs = document.querySelectorAll(".JSDiv");
-
-document.getElementById("clearButton").addEventListener("click", clearDivs);
-
-function clearDivs(){
-    
-      for(let i = 0; i < jsDivs.length; i++){
-        jsDivs[i].remove();
-    } 
-}
 
 document.getElementById("colorButton").addEventListener("click", addColor);
 
@@ -62,4 +53,28 @@ function addColor(){
         newDivs[i].style.backgroundColor = bgColor;
     }
 
+};
+
+
+
+document.querySelector("#clearButton").addEventListener("click", clearDivs);
+let jsDivs;
+function clearDivs(){
+      jsDivs = document.querySelectorAll(".JSDiv");
+      
+      for(let i = 0; i < jsDivs.length; i++){
+        jsDivs[i].remove();
+    } 
 }
+
+document.querySelector("#deleteButton").addEventListener("click", deleteLastDiv);
+let allDivs;
+function deleteLastDiv(){
+      allDivs = document.querySelectorAll(".JSDiv");
+      
+      for(let i = 0; i < allDivs.length; i++){
+        return allDivs[i].remove();
+    } 
+}
+
+

@@ -10,21 +10,22 @@ h1,h2,h3{
     text-transform: uppercase;
 }
 
-.col-12, .col-6, .col-4, .col-3, .col-2, .col-1 {
+.col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
     padding: 5%;
     border: 1px solid white;
     background-color: grey;
 }
 
+#intro h1{
+    margin-bottom: 2%;
+}
+
 #inputDiv{
     display: flex;
     flex-direction: row;
-    
+    justify-content: space-evenly
 }
 
-#inputDiv div{
-    display: block;
-}
 
 label{
     position: relative;
@@ -59,5 +60,6 @@ label{
      background-color: purple;
     border: 1px solid purple;
 }
+
 
 

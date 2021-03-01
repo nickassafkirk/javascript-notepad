@@ -18,8 +18,8 @@ function addNewDiv(addTo, elementType, className){
     let lastDiv = document.querySelector(addTo);
     console.log(lastDiv);
     let newDiv = document.createElement(elementType);
-    let insertDiv = lastDiv.append(newDiv);
-    let addClass = newDiv.classList.add(className);
+    lastDiv.append[0](newDiv);
+    newDiv.classList.add(className);
     newDiv.innerHTML = `I'm a new ${elementType}`;   
 }
 
