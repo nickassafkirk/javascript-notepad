@@ -10,9 +10,54 @@ h1,h2,h3{
     text-transform: uppercase;
 }
 
-.col-6, .col-3, .col-12{
-    height: 50px;
+.col-12, .col-6, .col-4, .col-3, .col-2, .col-1 {
     padding: 5%;
     border: 1px solid white;
     background-color: grey;
 }
+
+#inputDiv{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#inputDiv div{
+    display: block;
+}
+
+label{
+    position: relative;
+    top: -40px;
+    left: 50%;
+}
+
+#gridButton, #clearButton, #colorButton{
+    width: 30%;
+    padding: 1%;
+    color: #fff;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 2em;
+    word-spacing: -10px;
+    background-color: #2cc92c;
+    border: 1px solid #2cc92c;
+    border-radius: 5px;
+}
+
+#gridButton:hover{
+    background-color: orange;
+    border-color: orange;
+}
+
+#clearButton{
+    background-color: red;
+    border: 1px solid red;
+}
+
+#colorButton{
+     background-color: purple;
+    border: 1px solid purple;
+}
+
+

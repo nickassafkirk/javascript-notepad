@@ -49,9 +49,19 @@ function select(selection){
 }
 
 
-
 setCol6();
 setCol3();
 
 styleTitle();
 changeRed("title1");
+
+document.querySelector("button").innerText = "Add New Div";
+document.querySelector("button").style.marginTop = "25px"
+
+document.querySelector("button").addEventListener("click", function(){
+    document.getElementById("title1").style.backgroundColor = "blue";
+    addNewDiv(".row","div","col-12");
+});
+
+ //make three inputs in html. Take user inputs from form for class-name, background-color and inner text and use these three inputs to build a 
+

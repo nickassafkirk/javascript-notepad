@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Grid Builder</title>
+</head>
+<body>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="title1">Bootstrap Grid Builder</h1>
+                <p>Select the number of cells you want per row, the color of the grid and the inner text for each grid.</p>
+                <p>Click the button to build your grid</p>
+            </div>
+            <div class="col-12" id="inputDiv">
+                <div id="input1">
+                    <label for="col-x"># of Cells</label>
+                    <input type="number" name="col-x" id="col-x">
+                </div>
+                <div id="input2">
+                    <label for="bg-color">Background Color</label>
+                   <input type="color" name="bg-color" id="bg-color">
+                </div>
+                <div>
+                    <label for="placehoder">Placeholder Text</label>
+                    <input type="text" name="placeholder" id="placeholder">
+                </div>
+            </div>
+            <div class="col-12">
+                <button id="gridButton">Add new row</button>
+                <button id="clearButton">Clear</button>
+                <button id="colorButton">Add Color</button>
+            </div>  
+        </div>
+    </section>
+    
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+<script src="assets/js/buildgrid.js" type="text/javascript"></script>
+</body>
+</html>
