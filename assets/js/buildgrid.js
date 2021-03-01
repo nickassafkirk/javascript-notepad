@@ -72,7 +72,7 @@ let allDivs;
 function deleteLastDiv(){
       allDivs = document.querySelectorAll(".JSDiv");
       
-      for(let i = 0; i < allDivs.length; i++){
+      for(let i = allDivs.length -1 ; i >= 0; i--){
         return allDivs[i].remove();
     } 
 }
